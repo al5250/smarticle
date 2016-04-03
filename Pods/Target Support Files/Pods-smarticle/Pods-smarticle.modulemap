@@ -1,0 +1,6 @@
+framework module Pods_smarticle {
+  umbrella header "Pods-smarticle-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,16 +8,87 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+import Alamofire
 
+class SecondViewController: UIViewController {
+    
+    @IBOutlet weak var query: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
+
+    var buttons = [UIButton]()
+    var urls = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    
+    @IBAction func querySearch(sender: UIButton) {
+        
+        // clear previous buttons
+        for button in buttons
+        {
+            button.removeFromSuperview()
+        }
+        urls.removeAll()
+       
+        let searchTerm = self.query.text!.lowercaseString.stringByReplacingOccurrencesOfString(" ", withString: "+")
+        
+        // get articles from API
+        Alamofire.request(.GET, "https://access.alchemyapi.com/calls/data/GetNews?apikey=8f7e763eeebc70a4e4de4db6b78736090c3f2934&return=enriched.url.title,enriched.url.url&start=1458000000&end=1458687600&q.enriched.url.cleanedTitle=" + searchTerm + "&count=8&outputMode=json").responseJSON{
+            (response) -> Void in
+        
+            if let JSON = response.result.value {
+                
+                if let data = JSON["result"]!!["docs"]
+                {
+                    if data != nil {
+                        let x :CGFloat = 20.0
+                        var y :CGFloat = 100.0
+                        var button : UIButton
+                        for i in 0..<8
+                    {
+                        // display link as button
+                        if data![i] != nil {
+                            button = UIButton(type: UIButtonType.System) as UIButton
+                            button.frame = CGRectMake(x, y, UIScreen.mainScreen().bounds.width - 40.0, 50.0)
+                            button.setTitle(String(data![i]["source"]!!["enriched"]!!["url"]!!["title"]!!), forState: UIControlState.Normal)
+                            button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+                            button.titleLabel!.lineBreakMode = NSLineBreakMode.ByTruncatingTail
+                            button.tag = i
+                            self.view.addSubview(button)
+                            self.buttons.append(button)
+                            self.urls.append(String(data![i]["source"]!!["enriched"]!!["url"]!!["url"]!!))
+                            y = y + 50
+                        }
+
+                    }
+                        
+                    }
+                    
+                }
+            
+                
+            }
+    
+
+        
+        
+        }
+    }
+    
+    func buttonAction(sender:UIButton!)
+    {
+        // go to first tab and render appropriate URL
+        let firstTab = tabBarController?.viewControllers?[0] as? FirstViewController
+        firstTab!.setURLText(urls[sender.tag])
+        tabBarController?.selectedIndex = 0
+        
     }
 
 
