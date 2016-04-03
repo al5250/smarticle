@@ -2,8 +2,8 @@
 //  FirstViewController.swift
 //  smarticle
 //
-//  Created by Alexander Lin on 3/13/16.
-//  Copyright © 2016 Alexander Lin. All rights reserved.
+//  Created by graphander Lin on 3/13/16.
+//  Copyright © 2016 graphander Lin. All rights reserved.
 //
 
 import UIKit
@@ -178,6 +178,7 @@ class FirstViewController: UIViewController {
                                 NSCharacterSet.whitespaceCharacterSet()))
                         prev = ix.advancedBy(1)
                     }
+                   
                     
                     // runs machine learning algorithm
                     var arr = [Sentence]()
@@ -185,18 +186,18 @@ class FirstViewController: UIViewController {
                     {
                         arr.append(Sentence(newWords:thing))
                     }
-                    let alex = SenGraph(sens: arr)
-                    alex.iterRank(0.85, precision: 0.001)
+                    let graph = SenGraph(sens: arr)
+                    graph.iterRank(0.85, precision: 0.001)
                     var marker = [Int]()
-                    for i in 0..<alex.vertices.count
+                    for i in 0..<graph.vertices.count
                     {
                         marker.append(i)
                     }
                     
                     // extract top four sentences
-                    let combined = zip(alex.vertexWeights, marker).sort {$0.0 > $1.0}
+                    let combined = zip(graph.vertexWeights, marker).sort {$0.0 > $1.0}
                     let sortedtop : [Int]
-                    if alex.vertices.count >= 4
+                    if graph.vertices.count >= 4
                     {
                         let top = combined.map {$0.1}[0..<4]
                         sortedtop = top.sort()
@@ -214,14 +215,25 @@ class FirstViewController: UIViewController {
                     for i in 0..<sortedtop.count
                     {
                         summaryString += "\n- "
-                        summaryString += alex.vertices[sortedtop[i]].words
+                        summaryString += graph.vertices[sortedtop[i]].words
                     }
-                    boldTitle.appendAttributedString(NSMutableAttributedString(string: summaryString))
+                    boldTitle.appendAttributedString(NSMutableAttributedString(string: summaryString + "\n\n"))
+                    let original =  NSMutableAttributedString(string:"Original Article \n\n", attributes:attrs)
+                    boldTitle.appendAttributedString(original)
+                    boldTitle.appendAttributedString(NSMutableAttributedString(string: article))
                     self.summary.attributedText = boldTitle
+                }
+                else {
+                    // invalid URL
+                    let alert = UIAlertController(title: "Article Not Found", message: "Please enter in a different URL.", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
                 }
                 }
             }
+            
         }
+
 
     }
 

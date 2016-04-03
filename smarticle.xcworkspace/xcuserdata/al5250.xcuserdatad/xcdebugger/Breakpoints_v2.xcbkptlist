@@ -15,53 +15,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "5"
             endingLineNumber = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "shareURL.ShareViewController.init (shareURL.ShareViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; shareURL.ShareViewController"
-                  moduleName = "shareURL"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/al5250/Desktop/smarticle/smarticle/shareURL/ShareViewController.swift"
-                  timestampString = "481351644.406771"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "151">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "shareURL.ShareViewController.__allocating_init (shareURL.ShareViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;shareURL.ShareViewController&gt;"
-                  moduleName = "shareURL"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/al5250/Desktop/smarticle/smarticle/shareURL/ShareViewController.swift"
-                  timestampString = "481351644.407095"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "95">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "shareURL.ShareViewController.init (shareURL.ShareViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;shareURL.ShareViewController&gt;"
-                  moduleName = "shareURL"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/al5250/Desktop/smarticle/smarticle/shareURL/ShareViewController.swift"
-                  timestampString = "481351644.407336"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12"
-                  offsetFromSymbolStart = "88">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -103,11 +56,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "smarticle/SecondViewController.swift"
-            timestampString = "481348434.904756"
+            timestampString = "481411648.477204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "SecondViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -135,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "smarticle/FirstViewController.swift"
-            timestampString = "481348434.904756"
+            timestampString = "481411256.372303"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
             landmarkName = "buttonTapped(_:)"
             landmarkType = "5">
             <Locations>
@@ -183,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "smarticle/FirstViewController.swift"
-            timestampString = "481348434.904756"
+            timestampString = "481411256.372303"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "buttonTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -199,12 +152,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "smarticle/SecondViewController.swift"
-            timestampString = "481348434.904756"
+            timestampString = "481411648.477204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "querySearch(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "smarticle/FirstViewController.swift"
+            timestampString = "481411256.372303"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "buttonTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

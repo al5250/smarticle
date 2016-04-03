@@ -40,7 +40,7 @@ class SecondViewController: UIViewController {
         let searchTerm = self.query.text!.lowercaseString.stringByReplacingOccurrencesOfString(" ", withString: "+")
         
         // get articles from API
-        Alamofire.request(.GET, "https://access.alchemyapi.com/calls/data/GetNews?apikey=8f7e763eeebc70a4e4de4db6b78736090c3f2934&return=enriched.url.title,enriched.url.url&start=1458000000&end=1458687600&q.enriched.url.cleanedTitle=" + searchTerm + "&count=8&outputMode=json").responseJSON{
+        Alamofire.request(.GET, "https://access.alchemyapi.com/calls/data/GetNews?apikey=7a8f85783221b5bbf85481d3c11e8e587d15d104&return=enriched.url.title,enriched.url.url&start=1458000000&end=1458687600&q.enriched.url.cleanedTitle=" + searchTerm + "&count=8&outputMode=json").responseJSON{
             (response) -> Void in
         
             if let JSON = response.result.value {
@@ -52,24 +52,30 @@ class SecondViewController: UIViewController {
                         var y :CGFloat = 100.0
                         var button : UIButton
                         for i in 0..<8
-                    {
-                        // display link as button
-                        if data![i] != nil {
-                            button = UIButton(type: UIButtonType.System) as UIButton
-                            button.frame = CGRectMake(x, y, UIScreen.mainScreen().bounds.width - 40.0, 50.0)
-                            button.setTitle(String(data![i]["source"]!!["enriched"]!!["url"]!!["title"]!!), forState: UIControlState.Normal)
-                            button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
-                            button.titleLabel!.lineBreakMode = NSLineBreakMode.ByTruncatingTail
-                            button.tag = i
-                            self.view.addSubview(button)
-                            self.buttons.append(button)
-                            self.urls.append(String(data![i]["source"]!!["enriched"]!!["url"]!!["url"]!!))
-                            y = y + 50
+                        {
+                            // display link as button
+                            if data![i] != nil {
+                                button = UIButton(type: UIButtonType.System) as UIButton
+                                button.frame = CGRectMake(x, y, UIScreen.mainScreen().bounds.width - 40.0, 50.0)
+                                button.setTitle(String(data![i]["source"]!!["enriched"]!!["url"]!!["title"]!!), forState: UIControlState.Normal)
+                                button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+                                button.titleLabel!.lineBreakMode = NSLineBreakMode.ByTruncatingTail
+                                button.tag = i
+                                self.view.addSubview(button)
+                                self.buttons.append(button)
+                                self.urls.append(String(data![i]["source"]!!["enriched"]!!["url"]!!["url"]!!))
+                                y = y + 50
+                            }
                         }
-
-                    }
                         
                     }
+                    else {
+                        // invalid query search
+                        let alert = UIAlertController(title: "Cannot Find Articles", message: "Please enter in a different search term.", preferredStyle: UIAlertControllerStyle.Alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                        self.presentViewController(alert, animated: true, completion: nil)
+                    }
+
                     
                 }
             

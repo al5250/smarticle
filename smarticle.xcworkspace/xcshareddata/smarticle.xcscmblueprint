@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6AF0A938ACB7F47000F2C2F33AE7F61AF65125B7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E7A188073FDA715DC3389CE7537ED554AEF4A4C3" : 0,
+    "6AF0A938ACB7F47000F2C2F33AE7F61AF65125B7" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6B1C9968-32EA-4AA5-9EC2-78967F745473",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E7A188073FDA715DC3389CE7537ED554AEF4A4C3" : "",
+    "6AF0A938ACB7F47000F2C2F33AE7F61AF65125B7" : "smarticle\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "smarticle",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "smarticle.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:al5250\/smarticle.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6AF0A938ACB7F47000F2C2F33AE7F61AF65125B7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:al5250\/sm-rticle.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E7A188073FDA715DC3389CE7537ED554AEF4A4C3"
+    }
+  ]
+}
