@@ -15,6 +15,53 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "5"
             endingLineNumber = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "shareURL.ShareViewController.init (shareURL.ShareViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; shareURL.ShareViewController"
+                  moduleName = "shareURL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/al5250/Desktop/smarticle/smarticle/shareURL/ShareViewController.swift"
+                  timestampString = "481423817.678752"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "151">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "shareURL.ShareViewController.__allocating_init (shareURL.ShareViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;shareURL.ShareViewController&gt;"
+                  moduleName = "shareURL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/al5250/Desktop/smarticle/smarticle/shareURL/ShareViewController.swift"
+                  timestampString = "481423817.679117"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "shareURL.ShareViewController.init (shareURL.ShareViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;shareURL.ShareViewController&gt;"
+                  moduleName = "shareURL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/al5250/Desktop/smarticle/smarticle/shareURL/ShareViewController.swift"
+                  timestampString = "481423817.679331"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
